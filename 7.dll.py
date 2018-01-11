@@ -23,9 +23,11 @@ class dll(object):
                 if current_node.prev is not None:
                     current_node.prev.next = current_node.next
                     current_node.next.prev = current_node.prev
+                    break
                 else:
                     self.head = current_node.next
                     current_node.next.prev = None
+                    break
             current_node = current_node.next
     def show(self):
         print "Data in list:"
